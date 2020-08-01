@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoviesActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="237dp"
+        android:background="@drawable/circle_image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movies"
+        android:textColor="@color/text_color_a"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="25sp"
+        app:layout_editor_absoluteX="142dp"
+        app:layout_editor_absoluteY="58dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/noun_search_875351"
+        app:layout_editor_absoluteX="333dp"
+        app:layout_editor_absoluteY="65dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trending"
+        android:textColor="@color/text_color_a"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="18sp"
+        app:layout_editor_absoluteX="20dp"
+        app:layout_editor_absoluteY="125dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/saaho_upcoming_tamil_movie_banner_1"
+        app:layout_editor_absoluteX="20dp"
+        app:layout_editor_absoluteY="162dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_1"
+        app:layout_editor_absoluteX="276dp"
+        app:layout_editor_absoluteY="162dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_editor_absoluteX="0dp"
+        app:layout_editor_absoluteY="327dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="action"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@color/text_color_a"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="125dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="comedy"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@color/text_color_b"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="125dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="romance"
+            android:gravity="end"
+            android:textAllCaps="true"
+            android:textColor="@color/text_color_b"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="125dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="thriler"
+            android:textAllCaps="true"
+            android:textColor="@color/text_color_b"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="125dp"
+            tools:ignore="MissingConstraints" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

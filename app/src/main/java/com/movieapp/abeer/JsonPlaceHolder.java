@@ -2,6 +2,7 @@ package com.movieapp.abeer;
 
 import com.movieapp.abeer.models.BaseData;
 import com.movieapp.abeer.models.GenresModel;
+import com.movieapp.abeer.models.MovieDetailsModel;
 import com.movieapp.abeer.models.MovieModel;
 
 import java.util.List;
@@ -21,4 +22,10 @@ public interface JsonPlaceHolder {
 
     @GET("discover/movie?api_key=f0dd213b514dd22fa6d7790fdae32949&page=1&with_genres=28")
     Call<BaseData> getMoviesByGenresData();
+
+    @GET("movie/516486?api_key=f0dd213b514dd22fa6d7790fdae32949")
+    Call<MovieDetailsModel> getMovieDetail();
+
+    @GET("movie/516486/credits?api_key=f0dd213b514dd22fa6d7790fdae32949")
+    Call<BaseData> getCast();
 }

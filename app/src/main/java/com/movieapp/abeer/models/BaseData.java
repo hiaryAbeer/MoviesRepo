@@ -19,4 +19,11 @@ public class BaseData {
     public List<GenresModel> getGenresModelList() {
         return genresModelList;
     }
+
+    @SerializedName("cast")
+    private List<CastModel> castModels;
+
+    public List<CastModel> getCastModels() {
+        return castModels;
+    }
 }

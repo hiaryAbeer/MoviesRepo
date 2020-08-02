@@ -2,7 +2,9 @@ package com.movieapp.abeer.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class MovieModel {
+import java.io.Serializable;
+
+public class MovieModel implements Serializable {
 
 //    "id": 703745,
 //            "original_language": "en",

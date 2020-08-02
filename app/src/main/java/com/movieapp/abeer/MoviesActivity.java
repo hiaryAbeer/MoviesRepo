@@ -34,6 +34,7 @@ public class MoviesActivity extends AppCompatActivity {
     private List<String> genresModelList = new ArrayList<>();
     private TabAdapter tabAdapter;
     private TabLayout tabs;
+    private Retrofit retrofit;
 
     //    DemoCollectionPagerAdapter demoCollectionPagerAdapter;
     @Override
@@ -51,7 +52,7 @@ public class MoviesActivity extends AppCompatActivity {
         tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.themoviedb.org/3/")
+        retrofit = new Retrofit.Builder().baseUrl("https://api.themoviedb.org/3/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -85,7 +86,7 @@ public class MoviesActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<BaseData> call, Throwable t) {
                 Toast.makeText(MoviesActivity.this, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.e("dddd", t.getMessage());
+                Log.e("getTendingRequest/e", t.getMessage());
 
             }
         });
@@ -113,7 +114,7 @@ public class MoviesActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<BaseData> call, Throwable t) {
-                Log.e("geners/failed", t.getMessage());
+                Log.e("getGenresTypeRequest/e", t.getMessage());
 
             }
         });

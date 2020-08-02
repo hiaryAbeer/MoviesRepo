@@ -1,7 +1,9 @@
 package com.movieapp.abeer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +22,8 @@ public class MoviesByGenresAdapter  extends RecyclerView.Adapter<MoviesByGenresA
     private Context context;
     private List<MovieModel> list;
     private String imageURL = "https://image.tmdb.org/t/p/w500";//(​https://image.tmdb.org/t/p/​w500/
+    public static final String MOVIE_NAME = "MOVIE_DETAIL";
+    public static final String MOVIE_INTENT = "MOVIE_DETAIL";
 
     public MoviesByGenresAdapter(Context context, List<MovieModel> list) {
         this.context = context;
@@ -44,6 +48,18 @@ public class MoviesByGenresAdapter  extends RecyclerView.Adapter<MoviesByGenresA
         holder.rate.setText("" + list.get(position).getVoteAverage());
         holder.popularity.setText("" + list.get(position).getPopularity() + " Review");
 //        holder.name.setText(list.get(position).getOriginalTitle());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, MovieDetails.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putSerializable(MOVIE_NAME, list.get(position));
+                intent.putExtra(MOVIE_INTENT, list.get(position));
+                context.startActivity(intent);
+
+            }
+        });
 
     }
 

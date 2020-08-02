@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-<!--    <item>-->
-<!--        <shape android:shape="rectangle">-->
-<!--            <corners-->
-<!--                android:radius="13dp"-->
-<!--                />-->
-<!--&lt;!&ndash;            <solid android:color="@color/colorPrimary"/>&ndash;&gt;-->
-
-<!--        </shape>-->
-<!--    </item>-->
 
     <item>
         <shape>
@@ -20,7 +11,7 @@
 
             <solid android:color="#00CCCCCC" />
 
-            <corners android:radius="13dp" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
     <item>
@@ -33,7 +24,7 @@
 
             <solid android:color="#10CCCCCC" />
 
-            <corners android:radius="13dp" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
     <item>
@@ -46,7 +37,7 @@
 
             <solid android:color="#20CCCCCC" />
 
-            <corners android:radius="13dp" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
     <item>
@@ -59,7 +50,7 @@
 
             <solid android:color="#30CCCCCC" />
 
-            <corners android:radius="13dp" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
     <item>
@@ -72,7 +63,7 @@
 
             <solid android:color="#50CCCCCC" />
 
-            <corners android:radius="13dp" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
 
@@ -81,7 +72,7 @@
         <shape>
             <solid android:color="@android:color/white" />
 
-            <corners android:radius="13dp" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
 </layer-list>

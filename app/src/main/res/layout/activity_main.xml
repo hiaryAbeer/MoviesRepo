@@ -18,173 +18,177 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/a7m7wa213ccc41"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-89dp"
-            tools:layout_editor_absoluteY="-68dp" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="225dp"-->
+<!--            android:layout_marginRight="225dp"-->
+<!--            android:layout_marginBottom="590dp"-->
+<!--            android:src="@drawable/a7m7wa213ccc41"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:ignore="MissingConstraints" />-->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/main"
-            tools:layout_editor_absoluteX="289dp"
-            tools:layout_editor_absoluteY="-42dp"
-            tools:ignore="MissingConstraints" />
 
-        <ImageView
-            android:id="@+id/imageView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/saaho_upcoming_tamil_movie_banner"
-            tools:layout_editor_absoluteX="174dp"
-            tools:layout_editor_absoluteY="653dp" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/main"-->
+        <!--            tools:layout_editor_absoluteX="289dp"-->
+        <!--            tools:layout_editor_absoluteY="-42dp"-->
+        <!--            tools:ignore="MissingConstraints" />-->
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_semibold"
-            android:text="Sign In"
-            android:textColor="@color/text_color_a"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="209dp" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imageView31"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/saaho_upcoming_tamil_movie_banner"-->
+        <!--            tools:layout_editor_absoluteX="174dp"-->
+        <!--            tools:layout_editor_absoluteY="653dp" />-->
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="297dp"
-            android:layout_height="224dp"
-            android:layout_marginStart="39dp"
-            android:layout_marginLeft="39dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="57dp"
-            android:layout_marginRight="57dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_editor_absoluteX="39dp"
-            app:layout_editor_absoluteY="287dp"
-            tools:ignore="MissingConstraints">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Sign In"
+                    android:textColor="@color/text_color_a"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="209dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:drawableStart="@drawable/user"
-                android:drawableLeft="@drawable/user"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:paddingHorizontal="35dp"
-                android:paddingVertical="15dp"
-                android:shadowColor="@color/shadow_color"
-                android:shadowDy="5"
-                android:text="@={userModel.username}"
-                android:textColor="@color/text_color_a"
-                android:textSize="16sp" />
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="297dp"
+                    android:layout_height="224dp"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="57dp"
+                    android:layout_marginRight="57dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    app:layout_editor_absoluteX="39dp"
+                    app:layout_editor_absoluteY="287dp"
+                    tools:ignore="MissingConstraints">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="30dp"
-                android:drawableStart="@drawable/lock"
-                android:drawableLeft="@drawable/lock"
-                android:drawablePadding="10dp"
-                android:fontFamily="@font/poppins_regular"
-                android:hint="password"
-                android:inputType="textPassword"
-                android:paddingHorizontal="35dp"
-                android:paddingVertical="15dp"
-                android:shadowColor="@color/shadow_color"
-                android:shadowDy="5"
-                android:text="@={userModel.password}"
-                android:textColor="@color/text_color_a"
-                android:textSize="14sp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:drawableStart="@drawable/user"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingHorizontal="35dp"
+                        android:paddingVertical="15dp"
+                        android:shadowColor="@color/shadow_color"
+                        android:shadowDy="5"
+                        android:text="@={userModel.username}"
+                        android:textColor="@color/text_color_a"
+                        android:textSize="16sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:background="@color/button_background"
-                android:fontFamily="@font/poppins_medium"
-                android:onClick="@{clickHandler::onClickSignin}"
-                android:paddingVertical="15dp"
-                android:text="sign in"
-                android:textAllCaps="true"
-                android:textColor="@color/text_color_a"
-                android:textSize="14sp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="30dp"
+                        android:drawableStart="@drawable/lock"
+                        android:drawableLeft="@drawable/lock"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="password"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="35dp"
+                        android:paddingVertical="15dp"
+                        android:shadowColor="@color/shadow_color"
+                        android:shadowDy="5"
+                        android:text="@={userModel.password}"
+                        android:textColor="@color/text_color_a"
+                        android:textSize="14sp" />
 
-        </LinearLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@color/button_background"
+                        android:fontFamily="@font/poppins_medium"
+                        android:onClick="@{clickHandler::onClickSignin}"
+                        android:paddingVertical="15dp"
+                        android:text="sign in"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color_a"
+                        android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="133dp"
-            android:layout_marginLeft="133dp"
-            android:layout_marginTop="39dp"
-            android:fontFamily="@font/poppins_regular"
-            android:text="Forgot Password"
-            android:textSize="11sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-            app:layout_editor_absoluteX="133dp"
-            app:layout_editor_absoluteY="550dp"
-            tools:ignore="MissingConstraints" />
+                </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="83dp"
-            android:layout_marginLeft="83dp"
-            android:layout_marginTop="60dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_editor_absoluteX="83dp"
-            app:layout_editor_absoluteY="657dp"
-            tools:ignore="MissingConstraints">
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView3"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="133dp"-->
+        <!--            android:layout_marginLeft="133dp"-->
+        <!--            android:layout_marginTop="39dp"-->
+        <!--            android:fontFamily="@font/poppins_regular"-->
+        <!--            android:text="Forgot Password"-->
+        <!--            android:textSize="11sp"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"-->
+        <!--            app:layout_editor_absoluteX="133dp"-->
+        <!--            app:layout_editor_absoluteY="550dp"-->
+        <!--            tools:ignore="MissingConstraints" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_regular"
-                android:text="don't have a account? "
-                android:textColor="@color/dont_have_account"
-                android:textSize="12sp"
-                tools:ignore="MissingConstraints" />
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/linearLayout"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="83dp"-->
+        <!--            android:layout_marginLeft="83dp"-->
+        <!--            android:layout_marginTop="60dp"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView3"-->
+        <!--            app:layout_editor_absoluteX="83dp"-->
+        <!--            app:layout_editor_absoluteY="657dp"-->
+        <!--            tools:ignore="MissingConstraints">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="sign up"
-                android:textAllCaps="true"
-                android:textColor="@color/text_color_a"
-                android:textSize="14sp"
-                tools:ignore="MissingConstraints" />
-        </LinearLayout>
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:fontFamily="@font/poppins_regular"-->
+        <!--                android:text="don't have a account? "-->
+        <!--                android:textColor="@color/dont_have_account"-->
+        <!--                android:textSize="12sp"-->
+        <!--                tools:ignore="MissingConstraints" />-->
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/ellipse1"
-            app:layout_editor_absoluteX="72dp"
-            app:layout_editor_absoluteY="116dp"
-            tools:ignore="MissingConstraints" />
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:fontFamily="@font/poppins_semibold"-->
+        <!--                android:text="sign up"-->
+        <!--                android:textAllCaps="true"-->
+        <!--                android:textColor="@color/text_color_a"-->
+        <!--                android:textSize="14sp"-->
+        <!--                tools:ignore="MissingConstraints" />-->
+        <!--        </LinearLayout>-->
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/ellipse1"
-            app:layout_editor_absoluteX="268.02dp"
-            app:layout_editor_absoluteY="709.02dp"
-            tools:ignore="MissingConstraints" />
+        <!--        <ImageView-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:background="@drawable/ellipse1"-->
+        <!--            app:layout_editor_absoluteX="72dp"-->
+        <!--            app:layout_editor_absoluteY="116dp"-->
+        <!--            tools:ignore="MissingConstraints" />-->
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="25dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:background="@drawable/ellipse1"-->
+        <!--            app:layout_editor_absoluteX="268.02dp"-->
+        <!--            app:layout_editor_absoluteY="709.02dp"-->
+        <!--            tools:ignore="MissingConstraints" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

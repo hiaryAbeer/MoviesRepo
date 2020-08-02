@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "295865710524",
+    "firebase_url": "https://movie-app-b0055.firebaseio.com",
+    "project_id": "movie-app-b0055",
+    "storage_bucket": "movie-app-b0055.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295865710524:android:52c86eb92c893a51039db9",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295865710524-gdsii0v55ts8ti7jtg6hmo436dohpvv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH4YbmPFD5EM4hQZT6RlG_681YLAAdXhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295865710524-gdsii0v55ts8ti7jtg6hmo436dohpvv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295865710524:android:fc9f3d9b184855cd039db9",
+        "android_client_info": {
+          "package_name": "com.movieapp.abeer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295865710524-gdsii0v55ts8ti7jtg6hmo436dohpvv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH4YbmPFD5EM4hQZT6RlG_681YLAAdXhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295865710524-gdsii0v55ts8ti7jtg6hmo436dohpvv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295865710524:android:07e545f03a6b6c39039db9",
+        "android_client_info": {
+          "package_name": "com.movieapp.razan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295865710524-gdsii0v55ts8ti7jtg6hmo436dohpvv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH4YbmPFD5EM4hQZT6RlG_681YLAAdXhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295865710524-gdsii0v55ts8ti7jtg6hmo436dohpvv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

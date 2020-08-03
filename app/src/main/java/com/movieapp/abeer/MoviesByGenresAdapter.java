@@ -47,14 +47,11 @@ public class MoviesByGenresAdapter  extends RecyclerView.Adapter<MoviesByGenresA
         holder.name.setText(list.get(position).getOriginalTitle());
         holder.rate.setText("" + list.get(position).getVoteAverage());
         holder.popularity.setText("" + list.get(position).getPopularity() + " Review");
-//        holder.name.setText(list.get(position).getOriginalTitle());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, MovieDetails.class);
-//                Bundle bundle = new Bundle();
-//                bundle.putSerializable(MOVIE_NAME, list.get(position));
                 intent.putExtra(MOVIE_INTENT, list.get(position));
                 context.startActivity(intent);
 

@@ -35,8 +35,7 @@ public class CastAdapter extends RecyclerView.Adapter<CastAdapter.CastViewHolder
     @Override
     public void onBindViewHolder(@NonNull CastViewHolder holder, int position) {
 
-        Log.e("image", imageURL + list.get(position).getProfile_path());
-        if (!list.get(position).getProfile_path().equals(null)) {
+        if (list.get(position).getProfile_path() != null) {
             Uri uri = Uri.parse(imageURL + list.get(position).getProfile_path());//"https://raw.githubusercontent.com/facebook/fresco/master/docs/static/logo.png");
             holder.draweeView.setImageURI(uri);
         }

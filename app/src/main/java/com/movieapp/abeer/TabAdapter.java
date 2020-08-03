@@ -13,8 +13,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TabAdapter extends FragmentPagerAdapter {
 
-//    @StringRes
-//    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
     private List<String> titleList= new ArrayList<>();
 

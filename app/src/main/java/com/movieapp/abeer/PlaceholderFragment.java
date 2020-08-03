@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,6 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import com.movieapp.abeer.models.BaseData;
 import com.movieapp.abeer.models.MovieModel;
+import com.movieapp.abeer.viewmodels.MovieByTypeViewModel;
+import com.movieapp.abeer.viewmodels.TrendingViewModel;
 
 import java.util.List;
 
@@ -30,7 +33,9 @@ public class PlaceholderFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     private PageViewModel pageViewModel;
-    private  RecyclerView recyclerView;
+    private RecyclerView recyclerView;
+    private MovieByTypeViewModel movieByTypeViewModel;
+    private List<MovieModel> list;
 
     public static PlaceholderFragment newInstance(int index) {
         PlaceholderFragment fragment = new PlaceholderFragment();
@@ -57,54 +62,54 @@ public class PlaceholderFragment extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
 
-         recyclerView = root.findViewById(R.id.recyclerView_moviesByGenres);
+        recyclerView = root.findViewById(R.id.recyclerView_moviesByGenres);
         recyclerView.setLayoutManager(new GridLayoutManager(container.getContext(), 2));
         getMoviesByTypeRequest();
 
-//        final TextView textView = root.findViewById(R.id.section_label);
-
-//        pageViewModel.getText().observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                Log.e("text", s);
-//                textView.setText(s);
-//            }
-//        });
         return root;
     }
 
     void getMoviesByTypeRequest() {
 
-         JsonPlaceHolder jsonPlaceHolder;
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.themoviedb.org/3/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-         jsonPlaceHolder = retrofit.create(JsonPlaceHolder.class);
-        Call<BaseData> call = jsonPlaceHolder.getMoviesByGenresData();
-        call.enqueue(new Callback<BaseData>() {
-            @Override
-            public void onResponse(Call<BaseData> call, Response<BaseData> response) {
-//                Toast.makeText(MoviesActivity.this, "success", Toast.LENGTH_SHORT).show();
+        movieByTypeViewModel = ViewModelProviders.of(this).get(MovieByTypeViewModel.class);
+        movieByTypeViewModel.initialization();
+        movieByTypeViewModel.getMovieByTypeLiveData().observe(this, response -> {
+                list = response.getList();
 
-                if (response.isSuccessful()) {
-                    List<MovieModel> model = response.body().getList();
-//                    Log.e("cccc", " " + model.size());
-
-                    for (MovieModel model1 : model) {
-                    Log.e("moviesByGenric", "" + model1.getOriginalTitle());
-                    }
-                    MoviesByGenresAdapter moviesAdapter = new MoviesByGenresAdapter(getContext(), model);
+            MoviesByGenresAdapter moviesAdapter = new MoviesByGenresAdapter(getContext(), list);
                     recyclerView.setAdapter(moviesAdapter);
-                }
-            }
+            });
 
-            @Override
-            public void onFailure(Call<BaseData> call, Throwable t) {
-//                Toast.makeText(MoviesActivity.this, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.e("dddd", t.getMessage());
-
-            }
-        });
+//        JsonPlaceHolder jsonPlaceHolder;
+//        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://api.themoviedb.org/3/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//        jsonPlaceHolder = retrofit.create(JsonPlaceHolder.class);
+//        Call<BaseData> call = jsonPlaceHolder.getMoviesByGenresData();
+//        call.enqueue(new Callback<BaseData>() {
+//            @Override
+//            public void onResponse(Call<BaseData> call, Response<BaseData> response) {
+////                Toast.makeText(MoviesActivity.this, "success", Toast.LENGTH_SHORT).show();
+//
+//                if (response.isSuccessful()) {
+//                    List<MovieModel> model = response.body().getList();
+////                    Log.e("cccc", " " + model.size());
+//
+//                    for (MovieModel model1 : model) {
+//                        Log.e("moviesByGenric", "" + model1.getOriginalTitle());
+//                    }
+//                    MoviesByGenresAdapter moviesAdapter = new MoviesByGenresAdapter(getContext(), model);
+//                    recyclerView.setAdapter(moviesAdapter);
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<BaseData> call, Throwable t) {
+////                Toast.makeText(MoviesActivity.this, "" + t.getMessage(), Toast.LENGTH_SHORT).show();
+//                Log.e("dddd", t.getMessage());
+//
+//            }
+//        });
 
     }
 }

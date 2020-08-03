@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.movieapp.abeer"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -50,6 +50,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
-
+    def version= '1.1.1'
+    implementation "android.arch.lifecycle:extensions:$version"
+    annotationProcessor "android.arch.lifecycle:compiler:$version"
 
 }

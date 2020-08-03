@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.movieapp.abeer.models.MovieModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.TrendingViewHolder> {
     private Context context;
-    private List<MovieModel> list;
+    private List<MovieModel> list = new ArrayList<>();
     private String imageURL = "https://image.tmdb.org/t/p/w500";//(​https://image.tmdb.org/t/p/​w500/
 
     public TrendingAdapter(Context context, List<MovieModel> list) {
@@ -43,7 +44,7 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.Trendi
 
     @Override
     public int getItemCount() {
-        return list.size();
+         return list.size();
     }
 
     class TrendingViewHolder extends RecyclerView.ViewHolder {

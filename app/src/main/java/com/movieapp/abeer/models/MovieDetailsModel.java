@@ -48,6 +48,30 @@ public class MovieDetailsModel {
         return genresModelList;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMovieImage(String movieImage) {
+        this.movieImage = movieImage;
+    }
+
+    public void setPopularity(double popularity) {
+        this.popularity = popularity;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
+    public void setVote_average(double vote_average) {
+        this.vote_average = vote_average;
+    }
+
+    public void setGenresModelList(List<GenresModel> genresModelList) {
+        this.genresModelList = genresModelList;
+    }
+
     //
 //    {
 //        "adult": false,

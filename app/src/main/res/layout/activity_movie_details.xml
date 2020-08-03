@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <data>
+        <import type="com.movieapp.abeer.ShareClass"/>
+        <variable
+            name="type"
+            type="String" />
+
         <variable
             name="detailsModel"
             type="com.movieapp.abeer.models.MovieDetailsModel" />
@@ -90,6 +95,7 @@
 
                 <TextView
                     android:id="@+id/details_name"
+                    android:text="@={detailsModel.name}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
@@ -99,6 +105,7 @@
 
                 <TextView
                     android:id="@+id/details_type"
+                    android:text="@{type}"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
                     android:layout_marginTop="1dp"
@@ -114,6 +121,7 @@
 
                     <TextView
                         android:id="@+id/details_rate"
+                        android:text="@{String.valueOf(detailsModel.popularity)}"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginTop="1dp"
@@ -126,6 +134,7 @@
 
                     <TextView
                         android:id="@+id/details_seen"
+                        android:text="@{String.valueOf(detailsModel.vote_average)}"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="9dp"
@@ -136,6 +145,7 @@
 
                 <TextView
                     android:id="@+id/details_details"
+                    android:text="@={detailsModel.overview}"
                     android:layout_width="match_parent"
                     android:layout_height="91dp"
                     android:layout_marginTop="16dp"

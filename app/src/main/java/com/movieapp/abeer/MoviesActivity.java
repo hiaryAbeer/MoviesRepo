@@ -1,6 +1,7 @@
 package com.movieapp.abeer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.util.Log;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.android.material.tabs.TabLayout;
+import com.movieapp.abeer.databinding.ActivityMoviesBinding;
 import com.movieapp.abeer.models.GenresModel;
 import com.movieapp.abeer.models.MovieModel;
 import com.movieapp.abeer.viewmodels.GenresViewModel;
@@ -22,31 +24,32 @@ import java.util.List;
 
 public class MoviesActivity extends AppCompatActivity {
 
-    private RecyclerView trendingRecyclerView;
+//    private RecyclerView trendingRecyclerView;
     private TrendingAdapter trendingAdapter;
 
-    private ViewPager viewPager;
-    private List<String> genresModelList = new ArrayList<>();
+//    private ViewPager viewPager;
+//    private List<String> genresModelList = new ArrayList<>();
     private TabAdapter tabAdapter;
-    private TabLayout tabs;
+//    private TabLayout tabs;
 
     private TrendingViewModel trendingViewModel;
     private GenresViewModel genresViewModel;
 
     private List<MovieModel> trendingData = new ArrayList<>();
     private List<GenresModel> genresData = new ArrayList<>();
+    private ActivityMoviesBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fresco.initialize(this);
 
-        setContentView(R.layout.activity_movies);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_movies);
 
-        trendingRecyclerView = findViewById(R.id.recyclerView_trending);
-        viewPager = findViewById(R.id.movies_genres_vp);
-        tabs = findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
+//        trendingRecyclerView = findViewById(R.id.recyclerView_trending);
+//        viewPager = findViewById(R.id.movies_genres_vp);
+//        tabs = findViewById(R.id.tabs);
+        binding.tabs.setupWithViewPager(binding.moviesGenresVp);
         trendingAdapter = new TrendingAdapter(MoviesActivity.this, trendingData);
 
         getTrendingData();
@@ -63,9 +66,9 @@ public class MoviesActivity extends AppCompatActivity {
 //            articleArrayList.addAll(newsArticles);
 //            trendingAdapter.notifyDataSetChanged();
 
-            trendingRecyclerView.setLayoutManager(new LinearLayoutManager(MoviesActivity.this, RecyclerView.HORIZONTAL, true));
+            binding.recyclerViewTrending.setLayoutManager(new LinearLayoutManager(MoviesActivity.this, RecyclerView.HORIZONTAL, true));
             trendingAdapter = new TrendingAdapter(MoviesActivity.this, trendingData);
-            trendingRecyclerView.setAdapter(trendingAdapter);
+            binding.recyclerViewTrending.setAdapter(trendingAdapter);
         });
     }
 
@@ -76,11 +79,11 @@ public class MoviesActivity extends AppCompatActivity {
             genresData = response.getGenresModelList();
             Log.e("observelist", "" + trendingData.size());
 
-            for (GenresModel genresModel : genresData) {
-                genresModelList.add(genresModel.getName());
-            }
-            tabAdapter = new TabAdapter(MoviesActivity.this, getSupportFragmentManager(), genresModelList);
-            viewPager.setAdapter(tabAdapter);
+//            for (GenresModel genresModel : genresData) {
+//                genresModelList.add(genresModel.getName());
+//            }
+            tabAdapter = new TabAdapter(MoviesActivity.this, getSupportFragmentManager(), genresData);
+            binding.moviesGenresVp.setAdapter(tabAdapter);
 
         });
     }

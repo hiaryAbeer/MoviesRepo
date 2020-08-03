@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        userModel.setUsername("abeer@gmail.com");//john22
+//        userModel.setUsername("abeer@gmail.com");//john22
         onClickHandler = new OnClickHandler();
         mAuth = FirebaseAuth.getInstance();
 

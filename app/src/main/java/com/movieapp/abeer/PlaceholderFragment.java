@@ -19,6 +19,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import com.movieapp.abeer.models.BaseData;
+import com.movieapp.abeer.models.GenresModel;
 import com.movieapp.abeer.models.MovieModel;
 import com.movieapp.abeer.viewmodels.MovieByTypeViewModel;
 import com.movieapp.abeer.viewmodels.TrendingViewModel;
@@ -36,8 +37,11 @@ public class PlaceholderFragment extends Fragment {
     private RecyclerView recyclerView;
     private MovieByTypeViewModel movieByTypeViewModel;
     private List<MovieModel> list;
+//    private static GenresModel genresModel1;
 
-    public static PlaceholderFragment newInstance(int index) {
+    public static PlaceholderFragment newInstance(int index){//, GenresModel genresModel) {
+//        genresModel1 = genresModel;
+//        Log.e("placeholderfragment", "" + genresModel1.getId());
         PlaceholderFragment fragment = new PlaceholderFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);

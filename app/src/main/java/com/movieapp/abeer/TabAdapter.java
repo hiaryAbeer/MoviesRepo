@@ -3,6 +3,8 @@ package com.movieapp.abeer;
 import android.content.Context;
 import android.util.Log;
 
+import com.movieapp.abeer.models.GenresModel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,12 +16,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 public class TabAdapter extends FragmentPagerAdapter {
 
     private final Context mContext;
-    private List<String> titleList= new ArrayList<>();
+    private List<GenresModel> genresList= new ArrayList<>();
 
-    public TabAdapter(Context context, FragmentManager fm, List<String> titleList) {
+    public TabAdapter(Context context, FragmentManager fm, List<GenresModel> genresList) {
         super(fm);
         mContext = context;
-        this.titleList = titleList;
+        this.genresList = genresList;
     }
 
     @Override
@@ -32,8 +34,8 @@ public class TabAdapter extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        Log.e("adapter", titleList.get(position));
-        return titleList.get(position);//mContext.getResources().getString(TAB_TITLES[position]);//
+//        Log.e("adapter", titleList.get(position));
+        return genresList.get(position).getName();//mContext.getResources().getString(TAB_TITLES[position]);//
     }
 
     @Override
